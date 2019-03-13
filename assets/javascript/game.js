@@ -2,6 +2,7 @@
         let wins = 0;
         let losses = 0;
         let tries = 9;
+        var comGuess = comChoice[Math.floor(Math.random() * comChoice.length)];
 
         document.onkeyup = e => {
             var userGuess = e.key;
@@ -11,7 +12,6 @@
             } else {
                 document.querySelector('#user').innerHTML = userGuess;
             }
-            var comGuess = comChoice[Math.floor(Math.random() * comChoice.length)];
             document.querySelector('#com').innerHTML = comGuess;
             if (userGuess === comGuess) {
                 wins++;
