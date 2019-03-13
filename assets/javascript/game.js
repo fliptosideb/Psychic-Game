@@ -11,16 +11,19 @@
                 return null
             } else {
                 document.querySelector('#user').innerHTML = userGuess;
+                document.querySelector('#com').innerHTML = '';
             }
-            document.querySelector('#com').innerHTML = comGuess;
+            // document.querySelector('#com').innerHTML = comGuess;
             if (userGuess === comGuess) {
                 wins++;
                 alert('You win!');
+                document.querySelector('#com').innerHTML = comGuess;
                 document.querySelector('#wins').innerHTML = wins;
                 tries = 9;
             } else if (tries === 0) {
                 losses++;
                 alert('You are a loser!');
+                document.querySelector('#com').innerHTML = comGuess;
                 document.querySelector('#losses').innerHTML = losses;
                 tries = 9;
                 document.querySelector('#left').innerHTML = tries;
